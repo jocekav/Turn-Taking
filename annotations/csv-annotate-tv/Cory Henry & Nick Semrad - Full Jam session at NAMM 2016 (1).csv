@@ -1,0 +1,33 @@
+Highlight,Title,Author,URL,Note,Location
+"[struct","Cory Henry & Nick Semrad - Full Jam session at NAMM 2016","nordkeyboards",https://youtube.com/watch?v=8TwhLplrFNo,"Potential Turn Type	= [struct
+Instrumentation / Role = Key 1, lead
+Leader balance = Key 1
+Gesture = Nod, head cue",""
+"Support","Cory Henry & Nick Semrad - Full Jam session at NAMM 2016","nordkeyboards",https://youtube.com/watch?v=8TwhLplrFNo,"Key 2, aux
+Key 1
+Nod, gaze",""
+"]pass new","Cory Henry & Nick Semrad - Full Jam session at NAMM 2016","nordkeyboards",https://youtube.com/watch?v=8TwhLplrFNo,"]pass new
+Key 2, lead
+Key 2",""
+"Layer add","Cory Henry & Nick Semrad - Full Jam session at NAMM 2016","nordkeyboards",https://youtube.com/watch?v=8TwhLplrFNo,"layer add
+Key 2, aux
+Key 1",""
+"Pass add","Cory Henry & Nick Semrad - Full Jam session at NAMM 2016","nordkeyboards",https://youtube.com/watch?v=8TwhLplrFNo,"pass add
+Key 1, aux
+Key 2",""
+"Pass add","Cory Henry & Nick Semrad - Full Jam session at NAMM 2016","nordkeyboards",https://youtube.com/watch?v=8TwhLplrFNo,"pass add
+Key 1, comp
+Key 2
+Nod, gaze",""
+"Layer add","Cory Henry & Nick Semrad - Full Jam session at NAMM 2016","nordkeyboards",https://youtube.com/watch?v=8TwhLplrFNo,"layer add
+Key 2, lead
+Key 2",""
+"Pass add","Cory Henry & Nick Semrad - Full Jam session at NAMM 2016","nordkeyboards",https://youtube.com/watch?v=8TwhLplrFNo,"pass add
+Key 1, aux
+Key 2",""
+"[","Cory Henry & Nick Semrad - Full Jam session at NAMM 2016","nordkeyboards",https://youtube.com/watch?v=8TwhLplrFNo,"[
+Key 2, lead
+Key 2",""
+"] pass new","Cory Henry & Nick Semrad - Full Jam session at NAMM 2016","nordkeyboards",https://youtube.com/watch?v=8TwhLplrFNo,"] pass new
+Key 1, lead
+Key 1",""
