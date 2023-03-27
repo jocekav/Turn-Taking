@@ -27,27 +27,27 @@ class User_Input:
 
         self.probabilities = {
             'similarity': 0,
-            'density': 0,
+            'note_density': 0,
             'dynamics': 0,
             'elapsed_time': 0,
             'elapsed_time_percent': 0,
-            'interupt_length': 0,
-            'cadence': 0,
-            'gaze': 0
+            'cadence': 0
         }
 
     def fill_window(self, pitch, ms, vel):
-        self.curr_user_turn.append((pitch, ms, vel))
+        # self.curr_user_turn.append((pitch, ms, vel))
         self.curr_window.append((pitch, ms, vel))
 
     def update_window(self):
         # self.curr_user_turn.append(new_window)
         if self.debug:
-            print("Updating window. Prev window: " + str(self.prev_window))
+            print("Updating window. Prev window len: " + str(len(self.prev_window)))
         self.prev_window = self.curr_window
+        if self.prev_window != []:
+            self.curr_user_turn.append(self.prev_window)
         self.curr_window = []
         if self.debug:
-            print("Updating window. Switched window: " + str(self.prev_window))
+            print("Updating window. Switched window len: " + str(len(self.prev_window)))
 
     # def interpret_input(address: str, *args: List[Any]):
     #     ms = args[0]
@@ -72,12 +72,12 @@ class User_Input:
         if self.prev_window == [] or self.curr_window == []:
             return 0
         else:
-            prev_window_pitch = list(zip(*self.prev_window))[0]
-            prev_window_pitch = prev_window_pitch % 12
+            prev_window_pitch = list(list(zip(*self.prev_window))[0])
+            prev_window_pitch = [i % 12 for i in prev_window_pitch]
             prev_window_time = list(zip(*self.prev_window))[1]
         
-            curr_window_pitch = list(zip(*self.curr_window))[0]
-            curr_window_pitch = curr_window_pitch % 12
+            curr_window_pitch = list(list(zip(*self.curr_window))[0])
+            curr_window_pitch = [i % 12 for i in curr_window_pitch]
             curr_window_time = list(zip(*self.curr_window))[1]
 
             # direct similarity calculation - finds overlap
@@ -96,11 +96,15 @@ class User_Input:
 
     def update_similarity(self):
         similarity = self.get_similarity()
+        if similarity == 1:
+                print("similarity is 1, printing windows")
+                print(self.prev_window)
+                print(self.curr_window)
         self.probabilities['similarity'] = similarity
 
     def get_note_density(self):
         # how many notes have passed compared to last time window
-        if self.prev_window is []:
+        if self.prev_window is [] and self.curr_window is []:
             return 0
         else:
             prev_window_len = len(self.prev_window)
@@ -117,7 +121,7 @@ class User_Input:
 
     def get_dynamics(self):
         # check difference of moving avg of velocities
-        if self.prev_window is []:
+        if self.prev_window is [] and self.curr_window is []:
             return 0
         else:
             prev_window_len = len(self.prev_window)
@@ -129,13 +133,17 @@ class User_Input:
                 prev_avg_dynamics = prev_dynamics_sum / prev_window_len
             except:
                 prev_avg_dynamics = 0
+                print("exception")
             try:
                 curr_avg_dynamics = curr_dynamics_sum / curr_window_len
             except:
                 curr_avg_dynamics = 0
-                return 0
-            
-            change_dynamics = (curr_avg_dynamics - prev_avg_dynamics) / curr_avg_dynamics
+                print("exception")
+                # return 0
+            try:
+                change_dynamics = (curr_avg_dynamics - prev_avg_dynamics) / curr_avg_dynamics
+            except:
+                change_dynamics = 0
             return change_dynamics
         
     def update_dynamics(self):
@@ -144,7 +152,7 @@ class User_Input:
 
     def get_tonic(self):
         for note in self.curr_window:
-            pitch_class = note[1] % 12
+            pitch_class = note[0] % 12
             self.pitch_histogram[pitch_class] += 1
         likely_tonic = max(self.pitch_histogram)
         return likely_tonic
@@ -187,7 +195,7 @@ class User_Input:
 class Transition_Probability:
     # time window is the rate at which the user input is evaluated
     # auto set to 4000ms = 4 beats in 60bpm
-    def init(self, time_window=4000):
+    def init(self, time_window=5000):
 
         self.probabilities = {
             'similarity': 0,

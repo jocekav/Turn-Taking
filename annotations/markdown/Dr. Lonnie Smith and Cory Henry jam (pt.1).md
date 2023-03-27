@@ -5,7 +5,7 @@
 
 
 
-## [00:00: [iso electric organ](https://annotate.tv/watch/63d2d2ee5a025600085e2124?annotationId=63e688a7e1cdab000876fac0)
+## [00:00: [struct iso electric organ](https://annotate.tv/watch/63d2d2ee5a025600085e2124?annotationId=63e688a7e1cdab000876fac0)
 
 
 
@@ -15,7 +15,7 @@
 
 
 
-## [00:46: melodica player verbally invites trumpeter to join](https://annotate.tv/watch/63d2d2ee5a025600085e2124?annotationId=63e6892027a467000822d136)
+## [00:46: pass add, melodica player verbally invites trumpeter to join](https://annotate.tv/watch/63d2d2ee5a025600085e2124?annotationId=63e6892027a467000822d136)
 
 
 

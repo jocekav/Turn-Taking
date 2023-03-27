@@ -20,7 +20,7 @@ piano adds small motif that supports the double bass solo
 uncued
 
 
-## [01:03: ] end of bass lead, rest of instrumentation](https://annotate.tv/watch/63d2d2eea7dfc50008cb626b?annotationId=63e68223c5b639000825e100)
+## [01:03: ] layer new, end of bass lead, rest of instrumentation](https://annotate.tv/watch/63d2d2eea7dfc50008cb626b?annotationId=63e68223c5b639000825e100)
 
 
 
@@ -60,22 +60,22 @@ piano stops playing. only percussion and guitar.
 everyone else joins in
 
 
-## [02:24: ] end music](https://annotate.tv/watch/63d2d2eea7dfc50008cb626b?annotationId=63e6851827a467000822d131)
+## [02:24: ] struct, end music](https://annotate.tv/watch/63d2d2eea7dfc50008cb626b?annotationId=63e6851827a467000822d131)
 
 
 
 
-## [03:16: [ vocalized gesture to start music, fiddler leads](https://annotate.tv/watch/63d2d2eea7dfc50008cb626b?annotationId=63e6856faf48da00086735d6)
+## [03:16: [ pass new, vocalized gesture to start music, fiddler leads](https://annotate.tv/watch/63d2d2eea7dfc50008cb626b?annotationId=63e6856faf48da00086735d6)
 
 
 
 
-## [04:15: ] end of musical phrase](https://annotate.tv/watch/63d2d2eea7dfc50008cb626b?annotationId=63e685b5af48da00086735d7)
+## [04:15: ] struct, end of musical phrase](https://annotate.tv/watch/63d2d2eea7dfc50008cb626b?annotationId=63e685b5af48da00086735d7)
 
 various eye contact, smiles throughout but no official turn taking
 
 
-## [04:48: [ start of piano melodic introduction. solo](https://annotate.tv/watch/63d2d2eea7dfc50008cb626b?annotationId=63e685f3e1cdab000876fab9)
+## [04:48: [ iso, start of piano melodic introduction. solo](https://annotate.tv/watch/63d2d2eea7dfc50008cb626b?annotationId=63e685f3e1cdab000876fab9)
 
 
 
@@ -126,7 +126,7 @@ vocalist and saxophonist make eye contact with fiddler
 both fiddler and saxophonist look at vocalist
 
 
-## [06:48: ] end music](https://annotate.tv/watch/63d2d2eea7dfc50008cb626b?annotationId=63e6874e27a467000822d133)
+## [06:48: ] struct, end music](https://annotate.tv/watch/63d2d2eea7dfc50008cb626b?annotationId=63e6874e27a467000822d133)
 
 
 

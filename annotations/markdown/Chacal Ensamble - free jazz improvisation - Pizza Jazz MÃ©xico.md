@@ -139,7 +139,7 @@ bari sax adds interjections that support the tenor sax
 bari sax plays repeated long sustained note
 
 
-## [10:41: Suport](https://annotate.tv/watch/63d2d2eea8cb020008e3f63b?annotationId=63e672f26024ef00082f8886)
+## [10:41: Support](https://annotate.tv/watch/63d2d2eea8cb020008e3f63b?annotationId=63e672f26024ef00082f8886)
 
 Potential Turn Type	= support
 Instrumentation / Role = bari sax

@@ -24,12 +24,22 @@ class RepeatedTimer(object):
     if not self.is_running:
       self.next_call += self.interval
       self._timer = threading.Timer(self.next_call - time.time(), self._run)
+      self._timer.daemon = True
       self._timer.start()
       self.is_running = True
 
   def stop(self):
     self._timer.cancel()
     self.is_running = False
+
+
+# def call_repeatedly(interval, func, *args):
+#     stopped = Event()
+#     def loop():
+#         while not stopped.wait(interval): # the first call is in `interval` secs
+#             func(*args)
+#     Thread(target=loop).start()    
+#     return stopped.set
 
 class State:
     def __init__(self, id, is_active):
@@ -52,9 +62,13 @@ class State_Machine:
             self.current_state = self.follower
         elif self.current_state == self.follower:
             self.current_state = self.leader
-
+            
         if self.debug:
-           print("Current state is: " + str(self.current_state.id))
+            print("New state is: " + str(self.current_state.id))
+            
+        return str(self.current_state.id)
+
+        
     
     def create_leader(self):
         leader = State('leader', False)
@@ -69,23 +83,33 @@ class State_Machine:
 
         probability = 0
         if self.current_state.id == 'leader':
+            # want this to increase
             dynamics = probabilities['dynamics']
             # interupt = probabilities['interupt_length']
+            # looking for density to increase
+            density = probabilities['note_density'] 
+            # want this to decrease
             similarity = probabilities['similarity']
+            # this increases over time
             turn_length = probabilities['elapsed_time_percent']
             # gaze = probabilities['gaze']
             # probability = (dynamics + interupt + similarity + turn_length) * gaze
             probability = (dynamics + similarity + turn_length)
         elif self.current_state == self.follower:
-            dynamics = probabilities['dynamics']
-            density = probabilities['density']
-            similarity = probabilities['similarity']
+            # looking for dynamics to decrease
+            dynamics = probabilities['dynamics'] * -0.8
+            # looking for density to decrease
+            density = probabilities['note_density'] * -0.8
+            # similarity should increase
+            similarity = probabilities['similarity'] 
+            # this increases with time
             turn_length = probabilities['elapsed_time_percent']
+            # this should be a 1
             cadence = probabilities['cadence']
             # contour = probabilities['contour']
             # gaze = probabilities['gaze']
             # probability = (dynamics + density + similarity + cadence + contour + turn_length) * gaze
-            probability = (dynamics + density + similarity + cadence + turn_length)
+            probability = (dynamics + density + similarity + turn_length)
         
         if self.debug:
            print("Input probability: " + str(probability))
@@ -94,6 +118,8 @@ class State_Machine:
             # self.transition_probability.reset_probabilities()
             if self.debug:
                print("State Transition")
-            self.transition()
+            return self.transition()
+        if self.debug:
+           print('____________')
 
 

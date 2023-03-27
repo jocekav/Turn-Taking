@@ -58,12 +58,12 @@ Dynamic change led by sax and bass followed
 Tempo change led by sax and bass followed
 
 
-## [06:16: End of piece](https://annotate.tv/watch/63d2d2ecc3711a0008e526fe?annotationId=63e66161a6509400089f6a69)
+## [06:16: struct, End of piece](https://annotate.tv/watch/63d2d2ecc3711a0008e526fe?annotationId=63e66161a6509400089f6a69)
 
 
 
 
-## [07:14: Start of Piece](https://annotate.tv/watch/63d2d2ecc3711a0008e526fe?annotationId=63e661c76024ef00082f887f)
+## [07:14: struct, Start of Piece](https://annotate.tv/watch/63d2d2ecc3711a0008e526fe?annotationId=63e661c76024ef00082f887f)
 
 Potential Turn Type	= struct
 Instrumentation / Role = Cello and Bass

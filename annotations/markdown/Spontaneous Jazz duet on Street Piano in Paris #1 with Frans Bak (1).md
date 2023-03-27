@@ -10,19 +10,19 @@
 
 
 
-## [00:09: bystander asks to join in](https://annotate.tv/watch/63d2d2ee8330d10008271637?annotationId=63e67d4f27a467000822d128)
+## [00:09: pass add, bystander asks to join in](https://annotate.tv/watch/63d2d2ee8330d10008271637?annotationId=63e67d4f27a467000822d128)
 
 pianist 1 responds enthusiastically with a nod
 
 
-## [00:12: [](https://annotate.tv/watch/63d2d2ee8330d10008271637?annotationId=63e67dd1af48da00086735d0)
+## [00:12: pass add [](https://annotate.tv/watch/63d2d2ee8330d10008271637?annotationId=63e67dd1af48da00086735d0)
 
 pass add
 no physical gestures
 the joining musician added a melody
 
 
-## [00:22: supporting pianist laughs](https://annotate.tv/watch/63d2d2ee8330d10008271637?annotationId=63e67e3827a467000822d129)
+## [00:22: note, supporting pianist laughs](https://annotate.tv/watch/63d2d2ee8330d10008271637?annotationId=63e67e3827a467000822d129)
 
 both head nodding in sync
 
@@ -32,12 +32,12 @@ both head nodding in sync
 leading pianist then switches sides on the piano, the formerly supporting pianist shifts up to take melody
 
 
-## [01:19: head nod](https://annotate.tv/watch/63d2d2ee8330d10008271637?annotationId=63e67f1daf48da00086735d2)
+## [01:19: note, head nod](https://annotate.tv/watch/63d2d2ee8330d10008271637?annotationId=63e67f1daf48da00086735d2)
 
 supporting pianist nods to lead pianist to take their turn
 
 
-## [01:41: supporting pianist mimics rhythmic structure of lead](https://annotate.tv/watch/63d2d2ee8330d10008271637?annotationId=63e67f5d119fb50008f8759a)
+## [01:41: layer add, supporting pianist mimics rhythmic structure of lead](https://annotate.tv/watch/63d2d2ee8330d10008271637?annotationId=63e67f5d119fb50008f8759a)
 
 
 

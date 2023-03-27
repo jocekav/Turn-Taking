@@ -5,7 +5,7 @@
 
 
 
-## [00:00: organist lifts finger and says something to melodica/trumpeter](https://annotate.tv/watch/63d2d2ee77dc230008a5a729?annotationId=63e689cf119fb50008f875a6)
+## [00:00: struct organist lifts finger and says something to melodica/trumpeter](https://annotate.tv/watch/63d2d2ee77dc230008a5a729?annotationId=63e689cf119fb50008f875a6)
 
 
 
@@ -20,12 +20,12 @@
 
 
 
-## [00:39: ungestured melodica start](https://annotate.tv/watch/63d2d2ee77dc230008a5a729?annotationId=63e68a5387d6220008c55d9d)
+## [00:39: layer add, ungestured melodica start](https://annotate.tv/watch/63d2d2ee77dc230008a5a729?annotationId=63e68a5387d6220008c55d9d)
 
 
 
 
-## [00:51: [ start trumpet riff](https://annotate.tv/watch/63d2d2ee77dc230008a5a729?annotationId=63e692477c4ab4000883dacf)
+## [00:51: [ layer add, start trumpet riff](https://annotate.tv/watch/63d2d2ee77dc230008a5a729?annotationId=63e692477c4ab4000883dacf)
 
 melodica player head nodding
 
@@ -35,12 +35,12 @@ melodica player head nodding
 
 
 
-## [03:00: ] brief pause to say something to the audience](https://annotate.tv/watch/63d2d2ee77dc230008a5a729?annotationId=63e6933c8e91df00087c0e42)
+## [03:00: ] note, brief pause to say something to the audience](https://annotate.tv/watch/63d2d2ee77dc230008a5a729?annotationId=63e6933c8e91df00087c0e42)
 
 
 
 
-## [03:05: [ resume melodica riff](https://annotate.tv/watch/63d2d2ee77dc230008a5a729?annotationId=63e6936c8e91df00087c0e43)
+## [03:05: [ pass add, resume melodica riff](https://annotate.tv/watch/63d2d2ee77dc230008a5a729?annotationId=63e6936c8e91df00087c0e43)
 
 organist continues rhythmic chords
 trumpeter sways back and forth
@@ -52,7 +52,7 @@ melodica player bends up and down
 
 
 
-## [04:40: melodica player starts snapping](https://annotate.tv/watch/63d2d2ee77dc230008a5a729?annotationId=63e6959487d6220008c55e7d)
+## [04:40: note, melodica player starts snapping](https://annotate.tv/watch/63d2d2ee77dc230008a5a729?annotationId=63e6959487d6220008c55e7d)
 
 
 
@@ -67,7 +67,7 @@ gesture was a the organist pointing
 
 
 
-## [09:09: end music](https://annotate.tv/watch/63d2d2ee77dc230008a5a729?annotationId=63e696de8e91df00087c0e46)
+## [09:09: struct, end music](https://annotate.tv/watch/63d2d2ee77dc230008a5a729?annotationId=63e696de8e91df00087c0e46)
 
 
 

@@ -1,5 +1,5 @@
-Link,Genre,Length,Timestamp,0:00,0:10,0:38,0:43,0:52,0:54,1:03,1:05,1:45,1:50,2:20,2:25,2:40,2:47,3:02,3:13,3:16,3:19,3:24,3:27
-https://www.youtube.com/watch?v=8TwhLplrFNo,Jam session,3:39,Potential Turn Type,[struct,layer add,support,]pass new,pass add,layer add,pass add,[,] pass new,pass add,layer add,pass new,pass new,interrupt,layer add,interrupt,support,structure,pass new iso,pass add
+Link,Genre,Length,Timestamp,00:00,00:10,00:38,00:43,00:52,00:54,01:03,01:05,01:45,01:50,02:20,02:25,02:40,02:47,03:02,03:13,03:16,03:19,03:24,03:27
+https://www.youtube.com/watch?v=8TwhLplrFNo,Jam session,03:39,Potential Turn Type,[struct,layer add,support,]pass new,pass add,layer add,pass add,[,] pass new,pass add,layer add,pass new,pass new,interrupt,layer add,interrupt,support,structure,pass new iso,pass add
 ,,,Instrumentation / Role ,"Key 1, lead","Key 2, aux","Key 2, aux","Key 2, lead","Key 1, comp","Key 2, lead","Key 1, aux","Key 2, lead","Key 1, lead","Key 2, lead","Key 2, aux","Key 1, lead","Key 2, aux","Key 1, lead",Key 2,"Key 1, lead","Key 2, aux",Sync,"Key 2, lead","Key 1, lead"
 ,,,Leader balance,Key 1,Key 1,Key 1,Key 2,Key 2,Key 2,Key 2,Key 2,Key 1,Key 2,None,Key 1,Key 2,Key 1,,Key 1,Key 1,sync,Key 2,Key 1
 ,,,Gesture,"Nod, head cue",,"Nod, gaze",,"Nod, gaze",,,,,,,,,,,"Stand, nod, gaze",,"Shared gaze, sync head nods","head shake, pointing finger",stand
