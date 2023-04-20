@@ -28,6 +28,7 @@ class User_Input:
         self.probabilities = {
             'similarity': 0,
             'note_density': 0,
+            'discrete_density': 0,
             'dynamics': 0,
             'elapsed_time': 0,
             'elapsed_time_percent': 0,
@@ -37,6 +38,12 @@ class User_Input:
     def fill_window(self, pitch, ms, vel):
         # self.curr_user_turn.append((pitch, ms, vel))
         self.curr_window.append((pitch, ms, vel))
+
+    def reset_windows(self):
+        self.curr_window = []
+        self.prev_window = []
+        self.curr_user_turn = []
+        print("Reseting windows")
 
     def update_window(self):
         # self.curr_user_turn.append(new_window)
@@ -105,7 +112,7 @@ class User_Input:
     def get_note_density(self):
         # how many notes have passed compared to last time window
         if self.prev_window is [] and self.curr_window is []:
-            return 0
+            return (0, 0)
         else:
             prev_window_len = len(self.prev_window)
             curr_window_len = len(self.curr_window)
@@ -113,11 +120,12 @@ class User_Input:
                 change_note_density = (curr_window_len - prev_window_len) / curr_window_len
             except:
                 change_note_density = 0
-            return change_note_density
+            return (change_note_density, curr_window_len)
 
     def update_note_density(self):
-        note_density = self.get_note_density()
-        self.probabilities['note_density'] = note_density
+        change_note_density, discrete_density = self.get_note_density()
+        self.probabilities['note_density'] = change_note_density
+        self.probabilities['discrete_density'] = discrete_density
 
     def get_dynamics(self):
         # check difference of moving avg of velocities
@@ -192,62 +200,3 @@ class User_Input:
     def get_probabilities(self):
         return self.probabilities
 
-class Transition_Probability:
-    # time window is the rate at which the user input is evaluated
-    # auto set to 4000ms = 4 beats in 60bpm
-    def init(self, time_window=5000):
-
-        self.probabilities = {
-            'similarity': 0,
-            'density': 0,
-            'dynamics': 0,
-            'elapsed_time': 0,
-            'interupt_length': 0,
-            'cadence': 0,
-            'gaze': 0
-        }
-        # full user turn list
-        self.curr_user_turn = []
-        # self.user_knowledge = []
-        self.time_window = time_window
-        # notes played in previous time window
-        self.prev_window = []
-        # notes played in current time window
-        self.curr_window = []
-        self.turn_time = 0
-        self.amt_window = 0
-
-        # self.running_density = 0
-        # initialize a 1x12 list
-        self.pitch_histogram = [0] * 12
-
-    
-    def update_elapsed_time(self):
-        # compute elapsed number of beats
-        # longest turn is automatically 1.5 min
-        longest_turn = 90000
-        self.probabilities['elapsed_time'] = (self.probabilities['elapsed_time'] + self.time_window) / longest_turn
-
-
-    def update_probabilities(self):
-
-        self.update_density()
-        self.update_dynamics()
-        self.update_elapsed_time()
-        # self.update_interupt_length()
-        # self.update_gaze()
-        self.update_similarity()
-        self.update_cadence()
-    
-    def reset_probabilities(self):
-        self.probabilities['similarity'] = 0
-        self.probabilities['density'] = 0
-        self.probabilities['dynamics'] = 0
-        self.probabilities['elapsed_time'] = 0
-        self.probabilities['interupt_length'] = 0
-        self.probabilities['gaze'] = 0
-        self.probabilities['cadence'] = 0
-
-    def get_probabilities(self):
-        return self.probabilities
-    

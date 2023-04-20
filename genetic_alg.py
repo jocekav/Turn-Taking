@@ -194,7 +194,7 @@ class world:
                             gene_pattern[i] = (gene_pattern[i][0], gene_pattern[i][1] - 2)
                 gene.reinit(gene_pattern)
 
-    def play_melodies(self, client, pattern=0):
+    def play_melodies(self, client, gen=0, pattern=0):
         # input("press enter to play target")
         # pattern = self.target_obj.pattern
         # for i in range(len(pattern)):
@@ -203,7 +203,7 @@ class world:
         #     print(pattern[i])
         #     time.sleep(dur_s)
         print("playback")
-        if pattern == 0:
+        if pattern == 0 and gen == 0:
             # input("press enter to play next match")
             self.population.sort(key = lambda x: x.fitness)
             pattern = self.population[0].get_pattern()
@@ -221,6 +221,25 @@ class world:
                 # print(pattern[i])
                 i = (i + 1) % len(pattern)
                 time.sleep(dur_s)
+        if gen != 0 and pattern == 0:
+            self.population.sort(key = lambda x: x.fitness)
+            pattern = self.population[gen].get_pattern()
+            # i = 0
+            total = 0
+            # while total <= (tpb*num_beats):
+            for i in range(len(pattern)):
+                if pattern[i][1] != -1:
+                    note_dur = pattern[i][0]
+                    if note_dur < 150:
+                        note_dur = note_dur * 2
+                    total = total + note_dur 
+                    # if total >= 480*4*16:
+                    #     return
+                    dur_s = tick2second(note_dur, tpb, bpm2tempo(bpm))
+                    client.send_message("/max", [pattern[i][1], ((dur_s)*1000)])
+                    # print(pattern[i])
+                    # i = (i + 1) % len(pattern)
+                    time.sleep(dur_s)
         else:
             i = 0
             total = 0

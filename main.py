@@ -28,7 +28,7 @@ user_in = user_input.User_Input()
 
 ga_flag = False
 switch_flag = False
-state_flag = "leader"
+state_flag = "follower"
 
 # def print_test():
 #     global curr_window
@@ -44,12 +44,13 @@ def update_wrapper():
     global client
     if user_in.curr_user_turn == []:
         print("waiting for user")
-        # user_in.update_probabilities()
-        user_in.update_window()
+        user_in.update_probabilities()
+        # user_in.update_window()
     if switch_flag:
         print("waiting role switch")
+        user_in.reset_windows()
         # user_in.update_probabilities()
-        user_in.update_window()
+        # user_in.update_window()
         switch_flag = False
     else:
         user_in.update_probabilities()
@@ -61,13 +62,17 @@ def update_wrapper():
             state_flag = 'leader'
             print("Starting GA")
             call_ga(user_in.prev_window, client)
-        if state_change == 'follower':
+            user_in.update_window()
+        elif state_change == 'follower':
             ga_flag = False
             switch_flag = True
             state_flag = 'follower'
             print("stop ga")
             # user_in.curr_user_turn = []
-        user_in.update_window()
+            user_in.reset_windows()
+        else:
+            user_in.update_window()
+
 
 timer = state_machine.RepeatedTimer(interval=5, function=update_wrapper)
 
@@ -84,12 +89,14 @@ def call_ga(ga_target, client):
     # ga_target_len = len(ga_target)
     # loop over each window of the user's last turn
     world_ga = genetic_alg.world(ga_target, "jazz_licks.txt", pitch_options, rhythm_options)
+    gen = 0
     while ga_flag:
         print("Running GA")
         world_ga.run()
-        world_ga.play_melodies(client)
+        world_ga.play_melodies(client=client, gen=gen)
+        gen = gen + 1
         # start_ind = (start_ind + 1) % (ga_target_len - 1)
-        world_ga.reinit(ga_target, "jazz_licks.txt", pitch_options, rhythm_options)
+        # world_ga.reinit(ga_target, "jazz_licks.txt", pitch_options, rhythm_options)
 
 def process_midi(address, *args):
     global curr_window

@@ -88,18 +88,22 @@ class State_Machine:
             # interupt = probabilities['interupt_length']
             # looking for density to increase
             density = probabilities['note_density'] 
+            # if this is high it should switch
+            discrete_density = probabilities['discrete_density']
+            if discrete_density >= 7:
+                discrete_density = 0.7
             # want this to decrease
             similarity = probabilities['similarity']
             # this increases over time
             turn_length = probabilities['elapsed_time_percent']
             # gaze = probabilities['gaze']
             # probability = (dynamics + interupt + similarity + turn_length) * gaze
-            probability = (dynamics + similarity + turn_length)
+            probability = (dynamics + similarity + turn_length + discrete_density)
         elif self.current_state == self.follower:
             # looking for dynamics to decrease
             dynamics = probabilities['dynamics'] * -0.8
             # looking for density to decrease
-            density = probabilities['note_density'] * -0.8
+            density = probabilities['note_density'] * -0.7
             # similarity should increase
             similarity = probabilities['similarity'] 
             # this increases with time
